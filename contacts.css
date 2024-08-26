@@ -1,0 +1,292 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+header {
+  background-color: rgb(98, 3, 207);
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+}
+
+.subtitle {
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.button-main {
+  display: flex;
+  justify-content: center;
+}
+
+.button-header-main {
+  width: 300px;
+  height: 50px;
+  border-radius: 15px;
+  background-color: aqua;
+  font-size: 19px;
+  cursor: pointer;
+}
+
+.button-header-main:hover {
+  background: linear-gradient(
+    155.88deg,
+    #ffed00 0%,
+    #ff3dfe 51.89%,
+    #5253ff 100%
+  );
+}
+
+p {
+  font: bold 16px/1.5 Helvetica, sans-serif;
+  color: rgb(0, 0, 0);
+}
+
+footer {
+  background-color: rgb(24, 23, 23);
+  color: white;
+  height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center; */
+}
+
+.div-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid;
+  width: 1000px;
+  padding: 80px;
+}
+
+.plain {
+  color: white;
+  font-weight: normal;
+  /* font: sans-serif; */
+}
+
+.phone {
+  font: /*bold*/ 30px "Optima", sans-serif;
+  color: white;
+  font-weight: normal;
+}
+
+.phone-note {
+  color: white;
+  font-weight: normal;
+}
+
+.work {
+  font: bold 15px sans-serif;
+  color: white;
+  font-weight: normal;
+}
+
+.allrire {
+  padding: 10px;
+}
+
+.allrire-p {
+  font-weight: normal;
+  color: grey;
+  font-family: sans-serif;
+}
+
+h2 {
+  font: 20px/1.5 "Optima", sans-serif;
+  color: rgb(0, 0, 0);
+}
+
+h1 {
+  font: 30px/1.5 "Optima", sans-serif;
+  color: rgb(0, 0, 0);
+}
+
+.logo {
+  text-decoration: none;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+}
+
+.horisontal-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 300px;
+  /*height: 500px; */
+  /* display: inline; */
+  color: white;
+  display: flex;
+  flex-wrap: nowrap;
+  display: flex;
+  justify-content: center;
+}
+
+.horisontal-menu-point {
+  /* display: block; */
+  /* display: inline; */
+  padding: 10px;
+  height: 80px;
+  background-color: #7790ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  margin: 2px;
+}
+
+.horisontal-menu-point:hover {
+  background-color: #5253ff;
+  font-size: 30px;
+}
+
+.horisontal-menu-way,
+.horisontal-menu-point {
+  text-decoration: none;
+  color: white;
+  font-family: sans-serif;
+  width: 296px;
+  display: flex;
+  justify-content: center;
+}
+
+.horisontal-menu-point.active {
+  background-color: rgba(240, 0, 0, 0.144);
+  font-size: 30px;
+}
+
+.avito-div {
+  width: 200px;
+  height: 200px;
+}
+
+.avito {
+  color: red;
+  font: bold 16px/1.5 helvetica, sans-serif;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.avito:hover {
+  color: #5253ff;
+}
+
+.symbol-avito {
+  width: 100px;
+  height: auto;
+}
+
+.phone-m {
+  font: /*bold*/ 40px "Optima", sans-serif;
+}
+
+.phone-note-m {
+  font: bold 15px sans-serif;
+}
+
+@media screen and (max-width: 320px) {
+  .horisontal-menu {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .div-footer {
+    display: flex;
+    flex-direction: column;
+    padding: 60px;
+  }
+
+  .plain-work-div {
+    margin-top: 15px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .div-footer {
+    display: flex;
+    flex-direction: column;
+    padding: 60px;
+  }
+
+  .plain-work-div {
+    margin-top: 15px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .div-footer {
+    display: flex;
+    flex-direction: column;
+    padding: 60px;
+  }
+
+  .plain-work-div {
+    margin-top: 15px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .horisontal-menu {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .menu {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .horisontal-menu-point {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .div-footer {
+    justify-content: space-evenly;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .horisontal-menu {
+    flex-wrap: wrap;
+  }
+
+  .menu,
+  .horisontal-menu {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .horisontal-menu {
+    flex-wrap: wrap;
+  }
+  .menu,
+  .horisontal-menu {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 2560px) {
+}

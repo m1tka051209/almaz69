@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Наша галерея</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="./galery.css" />
+    <script src="script.js" defer></script>
+    <style>
+      #topNubex {
+        position: fixed;
+        right: 45px;
+        bottom: 45px;
+      }
+    </style>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+      $(function () {
+        $(window).scroll(function () {
+          if ($(this).scrollTop() != 0) {
+            $("#topNubex").fadeIn();
+          } else {
+            $("#topNubex").fadeOut();
+          }
+        });
+        $("#topNubex").click(function () {
+          $("body,html").animate({ scrollTop: 0 }, 700);
+        });
+      });
+    </script>
+  </head>
+  <body id="galery">
+    <header>
+      <h1 class="title">Алмазное бурение в Твери</h1>
+      <h2 class="subtitle">Пробурим всё!</h2>
+      <!-- <div class="button-main">
+        <a href="./index.html">
+          <button class="button-header-main">Главная</button>
+        </a>
+      </div> -->
+      <div class="menu">
+        <ul class="horisontal-menu">
+          <li class="horisontal-menu-point" data-active="home">
+            <a class="horisontal-menu-way" href="./index.html">Главная</a>
+          </li>
+          <li class="horisontal-menu-point" data-active="galery">
+            <a class="horisontal-menu-way" href="./galery.html">Галерея</a>
+          </li>
+          <li class="horisontal-menu-point" data-active="almbur">
+            <a class="horisontal-menu-way" href="./almbur.html"
+              >Алмазное бурение</a
+            >
+          </li>
+          <li class="horisontal-menu-point" data-active="price">
+            <a class="horisontal-menu-way" href="./price.html"
+              >Цена на услуги</a
+            >
+          </li>
+          <li class="horisontal-menu-point" data-active="contacts">
+            <a class="horisontal-menu-way" href="./contacts.html">Контакты</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <h2 class="content">Наша галерея</h2>
+      <p class="description">Здесь собраны фотографии некоторых наших работ</p>
+      <!-- <div class="carousel" data-carousel>
+        <button class="carousel-button prev" data-carousel-button="prev">
+          &#8656;
+        </button>
+        <button class="carousel-button next" data-carousel-button="next">
+          &#8658;
+        </button> data-slides
+        data-active-->
+      <ul class="car-image">
+        <li class="slide">
+          <img class="main-image" alt="Фото" src="./public/Снимок13.jpg" />
+          <p class="slide-description">
+            Алмазное бурение в стену. Процесс осложнялся неполнотой
+            перекрытия(есть риск упасть или уронить инструмент).
+          </p>
+        </li>
+        <li class="slide">
+          <img class="main-image" alt="Фото" src="./public/Снимок2.jpg" />
+          <p class="slide-description">
+            А это керн(то, что остаётся после алмазного бурения).
+          </p>
+        </li>
+        <li class="slide">
+          <img class="main-image" alt="Фото" src="./public/Снимок3.jpg" />
+          <p class="slide-description">А вот и само отверстие.</p>
+        </li>
+
+        <li class="slide">
+          <img class="main-image" alt="Фото" src="./public/Снимок5.jpg" />
+          <p class="slide-description"></p>
+        </li>
+        <li class="slide">
+          <img class="main-image" alt="Фото" src="./public/Снимок6.jpg" />
+          <p class="slide-description"></p>
+        </li>
+        <li class="slide">
+          <img class="main-image" alt="Фото" src="./public/Снимок7.jpg" />
+          <p class="slide-description"></p>
+        </li>
+        <li class="slide">
+          <img class="main-image" alt="Фото" src="./public/Снимок8.jpg" />
+          <p class="slide-description"></p>
+        </li>
+
+        <li class="slide">
+          <img class="main-image" alt="Фото" src="./public/Снимок10.jpg" />
+          <p class="slide-description"></p>
+        </li>
+        <li class="slide">
+          <img class="main-image" alt="Фото" src="./public/Снимок11.jpg" />
+          <p class="slide-description"></p>
+        </li>
+        <li class="slide">
+          <img class="main-image" alt="Фото" src="./public/Снимок12.jpg" />
+          <p class="slide-description"></p>
+        </li>
+
+        <li class="slide">
+          <img class="main-image" alt="Фото" src="./public/Снимок14.jpg" />
+          <p class="slide-description"></p>
+        </li>
+        <li class="slide">
+          <img class="main-image" alt="Фото" src="./public/Снимок15.jpg" />
+          <p class="slide-description"></p>
+        </li>
+        <li class="slide">
+          <img class="main-image" alt="Фото" src="./public/Снимок16.jpg" />
+          <p class="slide-description"></p>
+        </li>
+
+        <li class="slide">
+          <img class="main-image" alt="Фото" src="./public/Снимок19.jpg" />
+          <p class="slide-description">
+            Снова процесс бурения. На этот раз осложнён стеснёнными условиями
+            работы.
+          </p>
+        </li>
+        <li class="slide">
+          <img class="main-image" alt="Фото" src="./public/Снимок20.jpg" />
+          <p class="slide-description">
+            А это тоже керн, но после бурения армированного бетона.
+          </p>
+        </li>
+        <li class="slide">
+          <img class="main-image" alt="Фото" src="./public/Снимок21.jpg" />
+          <p class="slide-description">
+            В этот раз была поставлена весьма оригинальная задача: нужно было
+            пробурить отверстие для того, чтобы в него пролез человек. Процесс
+            осложнялся, во-первых, небольшой площадью открытого фундамента(в
+            процессе мешал сайдинг), а во-вторых в конструкции фундамента были
+            доски, замедляюшие процесс бурения. В итоге цель работы была
+            достигнута, и человек успешно пролез.
+          </p>
+        </li>
+      </ul>
+      <!-- </div> -->
+      <div class="main-video">
+        <p class="text-video">А вот видео-пример нашей работы.</p>
+        <div class="video-div">
+          <video src="../video-almaz.mp4" class="video" controls></video>
+        </div>
+      </div>
+
+      <div style="height: 30px"></div>
+      <div class="vverh">
+        <div id="topNubex">
+          <span
+            class="strelka"
+            width="70px"
+            height="70px"
+            style="background-color: antiquewhite"
+            >&#8657;</span
+          >
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="div-footer">
+        <div class="phone-div">
+          <p class="phone">+7 (999) 780-27-16</p>
+          <p class="phone-note">(к этому номеру также привязан WhatsApp)</p>
+        </div>
+        <div class="plain-work-div">
+          <p class="plain">Тверь, Тверская область.</p>
+          <p class="work">Алмазное бурение любой сложности</p>
+        </div>
+      </div>
+      <div class="allrire"><p class="allrire-p">&#xa9; 2023 almaz69</p></div>
+    </footer>
+    <script src="universal.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
